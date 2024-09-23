@@ -27,10 +27,10 @@ def analyze_packet(packet, pdf, y_position):
     
     packet_info += "\n"  # Empty line for readability
     pdf.drawString(100, y_position, packet_info)
-    y_position -= 100  # Adjust this value to control the spacing between lines
-    if y_position < 100:  # Check if we need a new page
+    y_position -= 100  
+    if y_position < 100:  
         pdf.showPage()
-        y_position = 750  # Reset y_position for the new page
+        y_position = 750  
     return y_position
 
 def main(pcap_file):
